@@ -7,7 +7,7 @@
 
 A complete, reproducible, zero-leakage tabular Machine Learning project built on the **UCI Dry Bean Dataset** (`13,611` raw samples $\rightarrow$ `13,543` unique grains, `16` continuous computer-vision morphological features, `7` bean varieties). Designed to run end-to-end on **Google Colab Free Tier CPU** (~11 minutes total runtime), backed by a **14-page Viva & Mathematical Mechanics Guide PDF** and an interactive **Streamlit Web Demo**.
 
-> **Live Demo:** `https://dry-bean-ml-demo.streamlit.app`
+> **Live Demo:** https://dry-bean-ml-demo.streamlit.app
 
 ---
 
