@@ -7,7 +7,7 @@
 
 A complete, reproducible, zero-leakage tabular Machine Learning project built on the **UCI Dry Bean Dataset** (`13,611` raw samples $\rightarrow$ `13,543` unique grains, `16` continuous computer-vision morphological features, `7` bean varieties). Designed to run end-to-end on **Google Colab Free Tier CPU** (~11 minutes total runtime), backed by a **14-page Viva & Mathematical Mechanics Guide PDF** and an interactive **Streamlit Web Demo**.
 
-> **Live Demo:** `[Replace with your Streamlit URL, e.g., https://your-app.streamlit.app]`
+> **Live Demo:** `https://dry-bean-ml-demo.streamlit.app`
 
 ---
 
@@ -92,7 +92,7 @@ A complete, reproducible, zero-leakage tabular Machine Learning project built on
 
 ### 1. Clone & Install Dependencies
 ```bash
-git clone https://github.com/<your-username>/dry-bean-ml-pipeline.git
+git clone https://github.com/ShoRya-001/dry-bean-ml-pipeline.git
 cd dry-bean-ml-pipeline
 pip install -r requirements.txt
 ```
