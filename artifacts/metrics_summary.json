@@ -1,0 +1,1081 @@
+{
+  "dataset": {
+    "raw_rows": 13611,
+    "raw_cols": 17,
+    "duplicates_removed": 68,
+    "clean_rows": 13543,
+    "train_rows": 10834,
+    "test_rows": 2709,
+    "imbalance_ratio": 6.79,
+    "class_counts": {
+      "DERMASON": 3546,
+      "SIRA": 2636,
+      "SEKER": 2027,
+      "HOROZ": 1860,
+      "CALI": 1630,
+      "BARBUNYA": 1322,
+      "BOMBAY": 522
+    }
+  },
+  "unsupervised": [
+    {
+      "Algorithm": "K-Means++ (k=3, Sil Peak)",
+      "Clusters_Found": 3,
+      "Noise_%": 0.0,
+      "Silhouette": 0.4066,
+      "ARI": 0.2976,
+      "NMI": 0.4859
+    },
+    {
+      "Algorithm": "K-Means++ (k=7, True Classes)",
+      "Clusters_Found": 7,
+      "Noise_%": 0.0,
+      "Silhouette": 0.3111,
+      "ARI": 0.6668,
+      "NMI": 0.7118
+    },
+    {
+      "Algorithm": "DBSCAN (eps=0.7, ms=16)",
+      "Clusters_Found": 4,
+      "Noise_%": 37.28,
+      "Silhouette": 0.3832,
+      "ARI": 0.2413,
+      "NMI": 0.4039
+    },
+    {
+      "Algorithm": "DBSCAN Knee (eps=1.2, ms=16)",
+      "Clusters_Found": 2,
+      "Noise_%": 5.56,
+      "Silhouette": 0.5671,
+      "ARI": 0.0387,
+      "NMI": 0.1391
+    }
+  ],
+  "all_features_cv": [
+    {
+      "Regime": "All_Features (16)",
+      "Model": "SVC (RBF)",
+      "Family": "Kernel/Margin",
+      "CV_Accuracy": 0.93,
+      "CV_Acc_Std": 0.0057,
+      "CV_Macro_F1": 0.9416,
+      "CV_F1_Std": 0.0055,
+      "CV_Weighted_F1": 0.9301,
+      "CV_ROC_AUC_OvR": 0.9955,
+      "Time_s": 4.32
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "HistGradientBoosting",
+      "Family": "Boosting",
+      "CV_Accuracy": 0.9283,
+      "CV_Acc_Std": 0.004,
+      "CV_Macro_F1": 0.9405,
+      "CV_F1_Std": 0.0041,
+      "CV_Weighted_F1": 0.9282,
+      "CV_ROC_AUC_OvR": 0.9952,
+      "Time_s": 5.76
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "LogisticRegression",
+      "Family": "Linear",
+      "CV_Accuracy": 0.9243,
+      "CV_Acc_Std": 0.003,
+      "CV_Macro_F1": 0.9365,
+      "CV_F1_Std": 0.0037,
+      "CV_Weighted_F1": 0.9244,
+      "CV_ROC_AUC_OvR": 0.9949,
+      "Time_s": 1.7
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "MLPClassifier",
+      "Family": "Neural Net",
+      "CV_Accuracy": 0.9251,
+      "CV_Acc_Std": 0.0062,
+      "CV_Macro_F1": 0.9365,
+      "CV_F1_Std": 0.0067,
+      "CV_Weighted_F1": 0.925,
+      "CV_ROC_AUC_OvR": 0.9951,
+      "Time_s": 1.8
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "GradientBoosting",
+      "Family": "Boosting",
+      "CV_Accuracy": 0.9251,
+      "CV_Acc_Std": 0.0076,
+      "CV_Macro_F1": 0.936,
+      "CV_F1_Std": 0.0076,
+      "CV_Weighted_F1": 0.9252,
+      "CV_ROC_AUC_OvR": 0.9947,
+      "Time_s": 37.67
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "KNN (k=7)",
+      "Family": "Distance",
+      "CV_Accuracy": 0.9232,
+      "CV_Acc_Std": 0.0062,
+      "CV_Macro_F1": 0.9359,
+      "CV_F1_Std": 0.0056,
+      "CV_Weighted_F1": 0.9232,
+      "CV_ROC_AUC_OvR": 0.9881,
+      "Time_s": 0.61
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "RandomForest",
+      "Family": "Bagging",
+      "CV_Accuracy": 0.9239,
+      "CV_Acc_Std": 0.0055,
+      "CV_Macro_F1": 0.935,
+      "CV_F1_Std": 0.0057,
+      "CV_Weighted_F1": 0.9238,
+      "CV_ROC_AUC_OvR": 0.9939,
+      "Time_s": 14.17
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "ExtraTrees",
+      "Family": "Bagging",
+      "CV_Accuracy": 0.9206,
+      "CV_Acc_Std": 0.0056,
+      "CV_Macro_F1": 0.9318,
+      "CV_F1_Std": 0.0054,
+      "CV_Weighted_F1": 0.9206,
+      "CV_ROC_AUC_OvR": 0.9934,
+      "Time_s": 2.76
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "LinearSVC",
+      "Family": "Kernel/Margin",
+      "CV_Accuracy": 0.9171,
+      "CV_Acc_Std": 0.0048,
+      "CV_Macro_F1": 0.931,
+      "CV_F1_Std": 0.0048,
+      "CV_Weighted_F1": 0.9176,
+      "CV_ROC_AUC_OvR": NaN,
+      "Time_s": 0.46
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "LDA",
+      "Family": "Discriminant",
+      "CV_Accuracy": 0.9053,
+      "CV_Acc_Std": 0.0089,
+      "CV_Macro_F1": 0.9219,
+      "CV_F1_Std": 0.0083,
+      "CV_Weighted_F1": 0.907,
+      "CV_ROC_AUC_OvR": 0.9932,
+      "Time_s": 0.25
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "RidgeClassifier",
+      "Family": "Linear",
+      "CV_Accuracy": 0.9039,
+      "CV_Acc_Std": 0.0082,
+      "CV_Macro_F1": 0.9172,
+      "CV_F1_Std": 0.0089,
+      "CV_Weighted_F1": 0.905,
+      "CV_ROC_AUC_OvR": NaN,
+      "Time_s": 0.22
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "DecisionTree",
+      "Family": "Tree",
+      "CV_Accuracy": 0.8952,
+      "CV_Acc_Std": 0.0063,
+      "CV_Macro_F1": 0.9105,
+      "CV_F1_Std": 0.0052,
+      "CV_Weighted_F1": 0.8953,
+      "CV_ROC_AUC_OvR": 0.946,
+      "Time_s": 0.78
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "GaussianNB",
+      "Family": "Probabilistic",
+      "CV_Accuracy": 0.8968,
+      "CV_Acc_Std": 0.006,
+      "CV_Macro_F1": 0.9064,
+      "CV_F1_Std": 0.0061,
+      "CV_Weighted_F1": 0.8969,
+      "CV_ROC_AUC_OvR": 0.9916,
+      "Time_s": 0.22
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "AdaBoost",
+      "Family": "Boosting",
+      "CV_Accuracy": 0.7974,
+      "CV_Acc_Std": 0.013,
+      "CV_Macro_F1": 0.6945,
+      "CV_F1_Std": 0.0562,
+      "CV_Weighted_F1": 0.7832,
+      "CV_ROC_AUC_OvR": 0.9672,
+      "Time_s": 3.66
+    },
+    {
+      "Regime": "All_Features (16)",
+      "Model": "MultinomialNB",
+      "Family": "Probabilistic",
+      "CV_Accuracy": 0.518,
+      "CV_Acc_Std": 0.0082,
+      "CV_Macro_F1": 0.4334,
+      "CV_F1_Std": 0.0148,
+      "CV_Weighted_F1": 0.4529,
+      "CV_ROC_AUC_OvR": 0.959,
+      "Time_s": 0.23
+    }
+  ],
+  "sfs": {
+    "forward_cols": [
+      "ConvexArea",
+      "EquivDiameter",
+      "Extent",
+      "Solidity",
+      "Roundness",
+      "Compactness",
+      "ShapeFactor3",
+      "ShapeFactor4"
+    ],
+    "backward_cols": [
+      "Area",
+      "Perimeter",
+      "Extent",
+      "Solidity",
+      "Roundness",
+      "Compactness",
+      "ShapeFactor2",
+      "ShapeFactor4"
+    ],
+    "forward_cv": [
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "SVC (RBF)",
+        "Family": "Kernel/Margin",
+        "CV_Accuracy": 0.9298,
+        "CV_Macro_F1": 0.9416,
+        "CV_Weighted_F1": 0.9298,
+        "Time_s": 5.05
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "MLPClassifier",
+        "Family": "Neural Net",
+        "CV_Accuracy": 0.9299,
+        "CV_Macro_F1": 0.9414,
+        "CV_Weighted_F1": 0.9299,
+        "Time_s": 3.02
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "ExtraTrees",
+        "Family": "Bagging",
+        "CV_Accuracy": 0.9282,
+        "CV_Macro_F1": 0.9398,
+        "CV_Weighted_F1": 0.9282,
+        "Time_s": 3.15
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "HistGradientBoosting",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.9267,
+        "CV_Macro_F1": 0.9383,
+        "CV_Weighted_F1": 0.9267,
+        "Time_s": 5.08
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "RandomForest",
+        "Family": "Bagging",
+        "CV_Accuracy": 0.9251,
+        "CV_Macro_F1": 0.9365,
+        "CV_Weighted_F1": 0.925,
+        "Time_s": 8.7
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "LogisticRegression",
+        "Family": "Linear",
+        "CV_Accuracy": 0.9239,
+        "CV_Macro_F1": 0.9359,
+        "CV_Weighted_F1": 0.924,
+        "Time_s": 1.27
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "GradientBoosting",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.9241,
+        "CV_Macro_F1": 0.9359,
+        "CV_Weighted_F1": 0.9241,
+        "Time_s": 20.16
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "KNN (k=7)",
+        "Family": "Distance",
+        "CV_Accuracy": 0.9186,
+        "CV_Macro_F1": 0.932,
+        "CV_Weighted_F1": 0.9188,
+        "Time_s": 1.17
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "LinearSVC",
+        "Family": "Kernel/Margin",
+        "CV_Accuracy": 0.9139,
+        "CV_Macro_F1": 0.9276,
+        "CV_Weighted_F1": 0.9144,
+        "Time_s": 1.21
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "LDA",
+        "Family": "Discriminant",
+        "CV_Accuracy": 0.9036,
+        "CV_Macro_F1": 0.9193,
+        "CV_Weighted_F1": 0.9049,
+        "Time_s": 1.08
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "GaussianNB",
+        "Family": "Probabilistic",
+        "CV_Accuracy": 0.9024,
+        "CV_Macro_F1": 0.9143,
+        "CV_Weighted_F1": 0.9025,
+        "Time_s": 1.07
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "DecisionTree",
+        "Family": "Tree",
+        "CV_Accuracy": 0.8956,
+        "CV_Macro_F1": 0.9096,
+        "CV_Weighted_F1": 0.8955,
+        "Time_s": 1.36
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "RidgeClassifier",
+        "Family": "Linear",
+        "CV_Accuracy": 0.8368,
+        "CV_Macro_F1": 0.8596,
+        "CV_Weighted_F1": 0.8272,
+        "Time_s": 1.07
+      },
+      {
+        "Regime": "Forward_SFS (8)",
+        "Model": "AdaBoost",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.781,
+        "CV_Macro_F1": 0.6956,
+        "CV_Weighted_F1": 0.7683,
+        "Time_s": 2.91
+      }
+    ],
+    "backward_cv": [
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "SVC (RBF)",
+        "Family": "Kernel/Margin",
+        "CV_Accuracy": 0.9307,
+        "CV_Macro_F1": 0.9422,
+        "CV_Weighted_F1": 0.9307,
+        "Time_s": 4.97
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "MLPClassifier",
+        "Family": "Neural Net",
+        "CV_Accuracy": 0.9297,
+        "CV_Macro_F1": 0.9412,
+        "CV_Weighted_F1": 0.9296,
+        "Time_s": 3.31
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "ExtraTrees",
+        "Family": "Bagging",
+        "CV_Accuracy": 0.9275,
+        "CV_Macro_F1": 0.9392,
+        "CV_Weighted_F1": 0.9275,
+        "Time_s": 3.0
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "HistGradientBoosting",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.9268,
+        "CV_Macro_F1": 0.9392,
+        "CV_Weighted_F1": 0.9268,
+        "Time_s": 5.01
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "RandomForest",
+        "Family": "Bagging",
+        "CV_Accuracy": 0.9259,
+        "CV_Macro_F1": 0.9375,
+        "CV_Weighted_F1": 0.9258,
+        "Time_s": 8.56
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "LogisticRegression",
+        "Family": "Linear",
+        "CV_Accuracy": 0.9245,
+        "CV_Macro_F1": 0.9363,
+        "CV_Weighted_F1": 0.9245,
+        "Time_s": 1.26
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "GradientBoosting",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.9247,
+        "CV_Macro_F1": 0.936,
+        "CV_Weighted_F1": 0.9247,
+        "Time_s": 20.54
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "KNN (k=7)",
+        "Family": "Distance",
+        "CV_Accuracy": 0.9204,
+        "CV_Macro_F1": 0.9332,
+        "CV_Weighted_F1": 0.9206,
+        "Time_s": 1.17
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "LinearSVC",
+        "Family": "Kernel/Margin",
+        "CV_Accuracy": 0.9057,
+        "CV_Macro_F1": 0.9202,
+        "CV_Weighted_F1": 0.9058,
+        "Time_s": 1.18
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "LDA",
+        "Family": "Discriminant",
+        "CV_Accuracy": 0.9015,
+        "CV_Macro_F1": 0.918,
+        "CV_Weighted_F1": 0.9028,
+        "Time_s": 1.09
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "GaussianNB",
+        "Family": "Probabilistic",
+        "CV_Accuracy": 0.9002,
+        "CV_Macro_F1": 0.9117,
+        "CV_Weighted_F1": 0.9002,
+        "Time_s": 1.07
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "DecisionTree",
+        "Family": "Tree",
+        "CV_Accuracy": 0.893,
+        "CV_Macro_F1": 0.9068,
+        "CV_Weighted_F1": 0.8929,
+        "Time_s": 1.37
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "RidgeClassifier",
+        "Family": "Linear",
+        "CV_Accuracy": 0.8162,
+        "CV_Macro_F1": 0.8338,
+        "CV_Weighted_F1": 0.8004,
+        "Time_s": 1.08
+      },
+      {
+        "Regime": "Backward_SFS (8)",
+        "Model": "AdaBoost",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.798,
+        "CV_Macro_F1": 0.7149,
+        "CV_Weighted_F1": 0.7882,
+        "Time_s": 2.95
+      }
+    ]
+  },
+  "pca": {
+    "n_90": 4,
+    "n_95": 4,
+    "n_99": 7,
+    "cum_evr": [
+      0.5554,
+      0.819,
+      0.8991,
+      0.9504,
+      0.9776,
+      0.989,
+      0.9961,
+      0.9993,
+      0.9998,
+      0.9999,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "pca95_cv": [
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "SVC (RBF)",
+        "Family": "Kernel/Margin",
+        "CV_Accuracy": 0.8936,
+        "CV_Acc_Std": 0.0063,
+        "CV_Macro_F1": 0.8955,
+        "CV_F1_Std": 0.006,
+        "CV_Weighted_F1": 0.8929,
+        "CV_ROC_AUC_OvR": 0.9906,
+        "Time_s": 3.96
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "MLPClassifier",
+        "Family": "Neural Net",
+        "CV_Accuracy": 0.8927,
+        "CV_Acc_Std": 0.0063,
+        "CV_Macro_F1": 0.8947,
+        "CV_F1_Std": 0.0059,
+        "CV_Weighted_F1": 0.8923,
+        "CV_ROC_AUC_OvR": 0.9908,
+        "Time_s": 2.12
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "LogisticRegression",
+        "Family": "Linear",
+        "CV_Accuracy": 0.8891,
+        "CV_Acc_Std": 0.0035,
+        "CV_Macro_F1": 0.8905,
+        "CV_F1_Std": 0.0037,
+        "CV_Weighted_F1": 0.8887,
+        "CV_ROC_AUC_OvR": 0.9897,
+        "Time_s": 0.44
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "RandomForest",
+        "Family": "Bagging",
+        "CV_Accuracy": 0.8892,
+        "CV_Acc_Std": 0.0029,
+        "CV_Macro_F1": 0.8899,
+        "CV_F1_Std": 0.0032,
+        "CV_Weighted_F1": 0.8888,
+        "CV_ROC_AUC_OvR": 0.9883,
+        "Time_s": 7.63
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "GradientBoosting",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.8888,
+        "CV_Acc_Std": 0.0029,
+        "CV_Macro_F1": 0.8897,
+        "CV_F1_Std": 0.0042,
+        "CV_Weighted_F1": 0.8881,
+        "CV_ROC_AUC_OvR": 0.9885,
+        "Time_s": 10.83
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "ExtraTrees",
+        "Family": "Bagging",
+        "CV_Accuracy": 0.8884,
+        "CV_Acc_Std": 0.0043,
+        "CV_Macro_F1": 0.889,
+        "CV_F1_Std": 0.0047,
+        "CV_Weighted_F1": 0.8878,
+        "CV_ROC_AUC_OvR": 0.9884,
+        "Time_s": 2.74
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "HistGradientBoosting",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.885,
+        "CV_Acc_Std": 0.0016,
+        "CV_Macro_F1": 0.8863,
+        "CV_F1_Std": 0.0014,
+        "CV_Weighted_F1": 0.8846,
+        "CV_ROC_AUC_OvR": 0.9884,
+        "Time_s": 3.85
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "KNN (k=7)",
+        "Family": "Distance",
+        "CV_Accuracy": 0.8827,
+        "CV_Acc_Std": 0.0052,
+        "CV_Macro_F1": 0.8844,
+        "CV_F1_Std": 0.0055,
+        "CV_Weighted_F1": 0.8822,
+        "CV_ROC_AUC_OvR": 0.9783,
+        "Time_s": 0.29
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "LDA",
+        "Family": "Discriminant",
+        "CV_Accuracy": 0.8791,
+        "CV_Acc_Std": 0.0059,
+        "CV_Macro_F1": 0.8819,
+        "CV_F1_Std": 0.0055,
+        "CV_Weighted_F1": 0.8785,
+        "CV_ROC_AUC_OvR": 0.9882,
+        "Time_s": 0.12
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "GaussianNB",
+        "Family": "Probabilistic",
+        "CV_Accuracy": 0.862,
+        "CV_Acc_Std": 0.0091,
+        "CV_Macro_F1": 0.8675,
+        "CV_F1_Std": 0.0084,
+        "CV_Weighted_F1": 0.8606,
+        "CV_ROC_AUC_OvR": 0.9843,
+        "Time_s": 0.23
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "DecisionTree",
+        "Family": "Tree",
+        "CV_Accuracy": 0.8473,
+        "CV_Acc_Std": 0.0049,
+        "CV_Macro_F1": 0.8478,
+        "CV_F1_Std": 0.0047,
+        "CV_Weighted_F1": 0.8472,
+        "CV_ROC_AUC_OvR": 0.911,
+        "Time_s": 0.34
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "LinearSVC",
+        "Family": "Kernel/Margin",
+        "CV_Accuracy": 0.8403,
+        "CV_Acc_Std": 0.0083,
+        "CV_Macro_F1": 0.8324,
+        "CV_F1_Std": 0.0091,
+        "CV_Weighted_F1": 0.8347,
+        "CV_ROC_AUC_OvR": NaN,
+        "Time_s": 0.23
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "AdaBoost",
+        "Family": "Boosting",
+        "CV_Accuracy": 0.786,
+        "CV_Acc_Std": 0.0247,
+        "CV_Macro_F1": 0.7352,
+        "CV_F1_Std": 0.0751,
+        "CV_Weighted_F1": 0.7785,
+        "CV_ROC_AUC_OvR": 0.9608,
+        "Time_s": 1.42
+      },
+      {
+        "Regime": "PCA_95% (4 PCs)",
+        "Model": "RidgeClassifier",
+        "Family": "Linear",
+        "CV_Accuracy": 0.6572,
+        "CV_Acc_Std": 0.0086,
+        "CV_Macro_F1": 0.6082,
+        "CV_F1_Std": 0.0132,
+        "CV_Weighted_F1": 0.5725,
+        "CV_ROC_AUC_OvR": NaN,
+        "Time_s": 0.2
+      }
+    ],
+    "pca_sensitivity": [
+      {
+        "PCA_Threshold": "90% (4 PCs)",
+        "Model": "SVC (RBF)",
+        "CV_Accuracy": 0.8936,
+        "CV_Macro_F1": 0.8955
+      },
+      {
+        "PCA_Threshold": "90% (4 PCs)",
+        "Model": "HistGradientBoosting",
+        "CV_Accuracy": 0.885,
+        "CV_Macro_F1": 0.8863
+      },
+      {
+        "PCA_Threshold": "90% (4 PCs)",
+        "Model": "LogisticRegression",
+        "CV_Accuracy": 0.8891,
+        "CV_Macro_F1": 0.8905
+      },
+      {
+        "PCA_Threshold": "95% (4 PCs)",
+        "Model": "SVC (RBF)",
+        "CV_Accuracy": 0.8936,
+        "CV_Macro_F1": 0.8955
+      },
+      {
+        "PCA_Threshold": "95% (4 PCs)",
+        "Model": "HistGradientBoosting",
+        "CV_Accuracy": 0.885,
+        "CV_Macro_F1": 0.8863
+      },
+      {
+        "PCA_Threshold": "95% (4 PCs)",
+        "Model": "LogisticRegression",
+        "CV_Accuracy": 0.8891,
+        "CV_Macro_F1": 0.8905
+      },
+      {
+        "PCA_Threshold": "99% (7 PCs)",
+        "Model": "SVC (RBF)",
+        "CV_Accuracy": 0.9292,
+        "CV_Macro_F1": 0.9411
+      },
+      {
+        "PCA_Threshold": "99% (7 PCs)",
+        "Model": "HistGradientBoosting",
+        "CV_Accuracy": 0.9254,
+        "CV_Macro_F1": 0.9372
+      },
+      {
+        "PCA_Threshold": "99% (7 PCs)",
+        "Model": "LogisticRegression",
+        "CV_Accuracy": 0.9249,
+        "CV_Macro_F1": 0.937
+      }
+    ]
+  },
+  "imbalance_study": [
+    {
+      "Model": "LogisticRegression",
+      "Strategy": "Baseline",
+      "CV_Accuracy": 0.9243,
+      "CV_Macro_F1": 0.9365
+    },
+    {
+      "Model": "LogisticRegression",
+      "Strategy": "Balanced Weights",
+      "CV_Accuracy": 0.9201,
+      "CV_Macro_F1": 0.9338
+    },
+    {
+      "Model": "LogisticRegression",
+      "Strategy": "SMOTE (Fold-Safe)",
+      "CV_Accuracy": 0.9207,
+      "CV_Macro_F1": 0.934
+    },
+    {
+      "Model": "RandomForest",
+      "Strategy": "Baseline",
+      "CV_Accuracy": 0.9231,
+      "CV_Macro_F1": 0.9342
+    },
+    {
+      "Model": "RandomForest",
+      "Strategy": "Balanced Weights",
+      "CV_Accuracy": 0.924,
+      "CV_Macro_F1": 0.935
+    },
+    {
+      "Model": "RandomForest",
+      "Strategy": "SMOTE (Fold-Safe)",
+      "CV_Accuracy": 0.9239,
+      "CV_Macro_F1": 0.9355
+    },
+    {
+      "Model": "HistGradientBoosting",
+      "Strategy": "Baseline",
+      "CV_Accuracy": 0.9283,
+      "CV_Macro_F1": 0.9405
+    },
+    {
+      "Model": "HistGradientBoosting",
+      "Strategy": "Balanced Weights",
+      "CV_Accuracy": 0.9267,
+      "CV_Macro_F1": 0.939
+    },
+    {
+      "Model": "HistGradientBoosting",
+      "Strategy": "SMOTE (Fold-Safe)",
+      "CV_Accuracy": 0.9269,
+      "CV_Macro_F1": 0.9396
+    }
+  ],
+  "tuning_summary": [
+    {
+      "Model": "SVC (RBF) Tuned",
+      "Best_Params": "{'clf__gamma': 0.05, 'clf__C': 5}",
+      "Tune_CV3_Macro_F1": 0.9434
+    },
+    {
+      "Model": "HistGradientBoosting Tuned",
+      "Best_Params": "{'clf__min_samples_leaf': 15, 'clf__max_leaf_nodes': 45, 'clf__learning_rate': 0.05, 'clf__l2_regularization': 0.1}",
+      "Tune_CV3_Macro_F1": 0.9409
+    },
+    {
+      "Model": "MLPClassifier Tuned",
+      "Best_Params": "{'clf__hidden_layer_sizes': (128, 64), 'clf__alpha': 0.0001}",
+      "Tune_CV3_Macro_F1": 0.9416
+    }
+  ],
+  "ensembles_cv": [
+    {
+      "Model": "Voting_Hard",
+      "CV_Accuracy": 0.9317,
+      "CV_Macro_F1": 0.9431,
+      "CV_Weighted_F1": 0.9316,
+      "CV_ROC_AUC_OvR": NaN,
+      "Time_s": 22.19
+    },
+    {
+      "Model": "Voting_Soft",
+      "CV_Accuracy": 0.9314,
+      "CV_Macro_F1": 0.943,
+      "CV_Weighted_F1": 0.9314,
+      "CV_ROC_AUC_OvR": 0.9959,
+      "Time_s": 23.17
+    },
+    {
+      "Model": "Stacking_Ensemble",
+      "CV_Accuracy": 0.9321,
+      "CV_Macro_F1": 0.9437,
+      "CV_Weighted_F1": 0.932,
+      "CV_ROC_AUC_OvR": 0.9949,
+      "Time_s": 69.54
+    }
+  ],
+  "master_test_table": [
+    {
+      "Candidate": "SVC_RBF_Tuned",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.9243,
+      "Test_Macro_F1": 0.9361,
+      "Test_Weighted_F1": 0.9243,
+      "Test_Macro_Precision": 0.9369,
+      "Test_Macro_Recall": 0.9354,
+      "Test_ROC_AUC_OvR": 0.9947,
+      "Fit_Time_s": 1.59
+    },
+    {
+      "Candidate": "Backward_SFS_8 (SVC)",
+      "Features_Used": 8,
+      "Test_Accuracy": 0.9247,
+      "Test_Macro_F1": 0.9358,
+      "Test_Weighted_F1": 0.9248,
+      "Test_Macro_Precision": 0.937,
+      "Test_Macro_Recall": 0.9348,
+      "Test_ROC_AUC_OvR": 0.9945,
+      "Fit_Time_s": 1.85
+    },
+    {
+      "Candidate": "Forward_SFS_8 (SVC)",
+      "Features_Used": 8,
+      "Test_Accuracy": 0.9247,
+      "Test_Macro_F1": 0.9356,
+      "Test_Weighted_F1": 0.9248,
+      "Test_Macro_Precision": 0.9368,
+      "Test_Macro_Recall": 0.9346,
+      "Test_ROC_AUC_OvR": 0.9945,
+      "Fit_Time_s": 1.84
+    },
+    {
+      "Candidate": "Stacking_Ensemble",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.924,
+      "Test_Macro_F1": 0.935,
+      "Test_Weighted_F1": 0.924,
+      "Test_Macro_Precision": 0.9355,
+      "Test_Macro_Recall": 0.9345,
+      "Test_ROC_AUC_OvR": 0.9938,
+      "Fit_Time_s": 30.98
+    },
+    {
+      "Candidate": "MLP_Tuned",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.9236,
+      "Test_Macro_F1": 0.9335,
+      "Test_Weighted_F1": 0.9237,
+      "Test_Macro_Precision": 0.9339,
+      "Test_Macro_Recall": 0.9337,
+      "Test_ROC_AUC_OvR": 0.9951,
+      "Fit_Time_s": 1.52
+    },
+    {
+      "Candidate": "Voting_Hard",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.9217,
+      "Test_Macro_F1": 0.933,
+      "Test_Weighted_F1": 0.9218,
+      "Test_Macro_Precision": 0.9335,
+      "Test_Macro_Recall": 0.9327,
+      "Test_ROC_AUC_OvR": NaN,
+      "Fit_Time_s": 10.96
+    },
+    {
+      "Candidate": "Best_Baseline_AllFeat (SVC)",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.921,
+      "Test_Macro_F1": 0.9328,
+      "Test_Weighted_F1": 0.9211,
+      "Test_Macro_Precision": 0.9342,
+      "Test_Macro_Recall": 0.9317,
+      "Test_ROC_AUC_OvR": 0.9945,
+      "Fit_Time_s": 1.56
+    },
+    {
+      "Candidate": "Voting_Soft",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.9206,
+      "Test_Macro_F1": 0.9322,
+      "Test_Weighted_F1": 0.9207,
+      "Test_Macro_Precision": 0.9328,
+      "Test_Macro_Recall": 0.9318,
+      "Test_ROC_AUC_OvR": 0.9953,
+      "Fit_Time_s": 10.73
+    },
+    {
+      "Candidate": "HistGB_Tuned",
+      "Features_Used": 16,
+      "Test_Accuracy": 0.9162,
+      "Test_Macro_F1": 0.9288,
+      "Test_Weighted_F1": 0.9163,
+      "Test_Macro_Precision": 0.9297,
+      "Test_Macro_Recall": 0.928,
+      "Test_ROC_AUC_OvR": 0.995,
+      "Fit_Time_s": 1.4
+    },
+    {
+      "Candidate": "PCA_95%_4PC (SVC)",
+      "Features_Used": 4,
+      "Test_Accuracy": 0.8963,
+      "Test_Macro_F1": 0.897,
+      "Test_Weighted_F1": 0.8956,
+      "Test_Macro_Precision": 0.9029,
+      "Test_Macro_Recall": 0.8946,
+      "Test_ROC_AUC_OvR": 0.9906,
+      "Fit_Time_s": 1.53
+    }
+  ],
+  "winner_name": "Stacking_Ensemble",
+  "winner_report": {
+    "BARBUNYA": {
+      "precision": 0.9266409266409267,
+      "recall": 0.9056603773584906,
+      "f1-score": 0.916030534351145,
+      "support": 265.0
+    },
+    "BOMBAY": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 104.0
+    },
+    "CALI": {
+      "precision": 0.9270516717325228,
+      "recall": 0.9355828220858896,
+      "f1-score": 0.9312977099236641,
+      "support": 326.0
+    },
+    "DERMASON": {
+      "precision": 0.9231863442389758,
+      "recall": 0.9153737658674189,
+      "f1-score": 0.9192634560906515,
+      "support": 709.0
+    },
+    "HOROZ": {
+      "precision": 0.9643835616438357,
+      "recall": 0.946236559139785,
+      "f1-score": 0.9552238805970149,
+      "support": 372.0
+    },
+    "SEKER": {
+      "precision": 0.9418886198547215,
+      "recall": 0.958128078817734,
+      "f1-score": 0.9499389499389499,
+      "support": 406.0
+    },
+    "SIRA": {
+      "precision": 0.8656716417910447,
+      "recall": 0.8804554079696395,
+      "f1-score": 0.8730009407337723,
+      "support": 527.0
+    },
+    "accuracy": 0.9239571797711332,
+    "macro avg": {
+      "precision": 0.9355461094145754,
+      "recall": 0.9344910016055653,
+      "f1-score": 0.9349650673764568,
+      "support": 2709.0
+    },
+    "weighted avg": {
+      "precision": 0.9242097557868167,
+      "recall": 0.9239571797711332,
+      "f1-score": 0.9240306121928538,
+      "support": 2709.0
+    }
+  },
+  "perm_importance_top5": [
+    {
+      "Feature": "ShapeFactor4",
+      "Perm_Importance_Mean": 0.08343756469879003,
+      "Perm_Importance_Std": 0.005199459147036746
+    },
+    {
+      "Feature": "Roundness",
+      "Perm_Importance_Mean": 0.07486249523141389,
+      "Perm_Importance_Std": 0.0038499044101492214
+    },
+    {
+      "Feature": "ShapeFactor1",
+      "Perm_Importance_Mean": 0.06701672740143633,
+      "Perm_Importance_Std": 0.005731779219496087
+    },
+    {
+      "Feature": "ConvexArea",
+      "Perm_Importance_Mean": 0.039486444047296995,
+      "Perm_Importance_Std": 0.004626509536399047
+    },
+    {
+      "Feature": "AspectRatio",
+      "Perm_Importance_Mean": 0.03711336040544651,
+      "Perm_Importance_Std": 0.0030485503202428476
+    }
+  ],
+  "shap_top5": [
+    {
+      "Feature": "Compactness",
+      "Mean_Abs_SHAP": 0.44488736246693944
+    },
+    {
+      "Feature": "Area",
+      "Mean_Abs_SHAP": 0.423943382827754
+    },
+    {
+      "Feature": "ShapeFactor1",
+      "Mean_Abs_SHAP": 0.31642008243894976
+    },
+    {
+      "Feature": "Perimeter",
+      "Mean_Abs_SHAP": 0.27916005169554503
+    },
+    {
+      "Feature": "AspectRatio",
+      "Mean_Abs_SHAP": 0.2348341409667919
+    }
+  ]
+}
